@@ -3,19 +3,6 @@
 # Author: Siddhant Jajoo.
 # Edited: Hatem Alamir
 
-for subm in "poky meta-openembedded meta-raspberrypi"; do
-	if [ ! -d "$subm" ]; then
-		echo "$subm not found! Clonning..."
-		git submodule add "https://git.yoctoproject.org/git/$subm" "$subm"
-	else
-		echo "$subm found."
-	fi
-done
-
-git submodule init
-git submodule sync
-git submodule update
-
 # local.conf won't exist until this step on first execution
 source poky/oe-init-build-env
 
