@@ -6,7 +6,7 @@ LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/MIT;md5=0835ade698e0bcf8506ecda
 inherit module
 
 SRC_URI = "git://git@github.com/cu-ecen-aeld/assignments-3-and-later-hatemalamir.git;protocol=ssh;branch=main"
-SRCREV = "940d6517bbb54e96b57dfa6144d15988db553242"
+SRCREV = "8cd67ba68aebf9985024e7e276b803c5d2816d51"
 
 PV = "1.0+git${SRCPV}"
 
