@@ -14,8 +14,8 @@ S = "${WORKDIR}/git/aesd-char-driver"
 # UNPACKDIR = "${S}"
 RPROVIDES:${PN} += "kernel-module-aesdchar"
 
-FILES:${PN} += "${sysconfdir}/modules-load.d/aesdchar.conf"
 do_install:append() {
 	install -d ${D}${sysconfdir}/modules-load.d
 	install -m 0644 ${S}/aesdchar.conf ${D}${sysconfdir}/modules-load.d/aesdchar.conf
 }
+FILES:${PN} += "${sysconfdir}/modules-load.d/aesdchar.conf"
