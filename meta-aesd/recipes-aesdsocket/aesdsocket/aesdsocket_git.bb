@@ -8,7 +8,6 @@ SRCREV = "8cd67ba68aebf9985024e7e276b803c5d2816d51"
 # Wifi configs
 SRC_URI += " file://wpa_supplicant.conf"
 
-
 PV = "1.0+git${SRCPV}"
 
 S = "${WORKDIR}/git/server"
@@ -31,7 +30,7 @@ do_install () {
 	install -m 0755 ${S}/aesdsocket ${D}${bindir}/
 	install -d ${D}${sysconfdir}/init.d
 	install -m 0755 ${S}/aesdsocket-start-stop ${D}${sysconfdir}/init.d/
-	install -m 0600 ${WORKDIR}/wpa_supplicant.conf ${D}${sysconfdir}/wpa_supplicant.conf
+	install -m 0600 ${WORKDIR}/sources-unpack/wpa_supplicant.conf ${D}${sysconfdir}/wpa_supplicant.conf
 }
 FILES:${PN} += "${bindir}/aesdsocket"
 FILES:${PN} += "${sysconfdir}/wpa_supplicant.conf"
