@@ -17,5 +17,14 @@ RPROVIDES:${PN} += "kernel-module-aesdchar"
 do_install:append() {
 	install -d ${D}${sysconfdir}/modules-load.d
 	install -m 0644 ${S}/aesdchar.conf ${D}${sysconfdir}/modules-load.d/aesdchar.conf
+
+	install -m 0755 ${S}/aesdchar_load ${D}${sbindir}/
+	install -m 0755 ${S}/aesdchar_unload ${D}${sbindir}/
+
+	install -d ${D}${sysconfdir}/init.d
+	install -m 0644 ${S}/S97aesdchar ${D}${sysconfdir}/init.d/
 }
 FILES:${PN} += "${sysconfdir}/modules-load.d/aesdchar.conf"
+FILES:${PN} += "${sbindir}/aesdchar_load"
+FILES:${PN} += "${sbindir}/aesdchar_unload"
+FILES:${PN} += "${sysconfdir}/init.d/S97aesdchar"
