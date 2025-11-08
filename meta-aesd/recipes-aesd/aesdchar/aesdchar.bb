@@ -12,6 +12,7 @@ PV = "1.0+git${SRCPV}"
 S = "${WORKDIR}/git/aesd-char-driver"
 INITSCRIPT_PACKAGES = "${PN}"
 INITSCRIPT_NAME:${PN} = "aesdchar"
+INITSCRIPT_PARAMS:${PN} = "start 97 2 3 4 5 . stop 20 0 1 6 ."
 
 RPROVIDES:${PN} += "kernel-module-aesdchar"
 

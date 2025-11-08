@@ -13,6 +13,7 @@ PV = "1.0+git${SRCPV}"
 S = "${WORKDIR}/git/server"
 INITSCRIPT_PACKAGES = "${PN}"
 INITSCRIPT_NAME:${PN} = "aesdsocket-start-stop"
+INITSCRIPT_PARAMS:${PN} = "start 98 2 3 4 5 . stop 20 0 1 6 ."
 TARGET_LDFLAGS += "-pthread -lrt"
 
 inherit update-rc.d
