@@ -31,3 +31,4 @@ do_install:append() {
 FILES:${PN} += "${sysconfdir}/modules-load.d/aesdchar.conf"
 FILES:${PN} += "${sbindir}/aesdchar_load"
 FILES:${PN} += "${sbindir}/aesdchar_unload"
+FILES:${PN} += "${sysconfdir}/init.d/S97aesdchar"
