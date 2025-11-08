@@ -18,6 +18,7 @@ do_install:append() {
 	install -d ${D}${sysconfdir}/modules-load.d
 	install -m 0644 ${S}/aesdchar.conf ${D}${sysconfdir}/modules-load.d/aesdchar.conf
 
+	install -d ${D}${sbindir}
 	install -m 0755 ${S}/aesdchar_load ${D}${sbindir}/
 	install -m 0755 ${S}/aesdchar_unload ${D}${sbindir}/
 
