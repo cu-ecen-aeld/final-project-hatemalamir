@@ -7,7 +7,8 @@ inherit module
 inherit update-rc.d
 
 SRC_URI = "git://git@github.com/cu-ecen-aeld/assignments-3-and-later-hatemalamir.git;protocol=ssh;branch=main"
-SRCREV = "8cd67ba68aebf9985024e7e276b803c5d2816d51"
+SRCREV = "61f246dec7d73cfa86b38d6061e4f63c1dd41281"
+
 PV = "1.0+git${SRCPV}"
 S = "${WORKDIR}/git/aesd-char-driver"
 INITSCRIPT_PACKAGES = "${PN}"

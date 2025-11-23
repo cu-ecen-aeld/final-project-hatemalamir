@@ -4,7 +4,8 @@ LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/MIT;md5=0835ade698e0bcf8506ecda
 
 # Main code
 SRC_URI = "git://git@github.com/cu-ecen-aeld/assignments-3-and-later-hatemalamir.git;protocol=ssh;branch=main"
-SRCREV = "8cd67ba68aebf9985024e7e276b803c5d2816d51"
+SRCREV = "61f246dec7d73cfa86b38d6061e4f63c1dd41281"
+
 # Wifi configs
 SRC_URI += " file://wpa_supplicant_template.conf"
 
