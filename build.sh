@@ -57,7 +57,7 @@ function add_layers {
 layers=("meta-oe" "meta-python" "meta-networking")
 add_layers "../meta-openembedded" "${layers[@]}"
 
-layers=("meta-raspberrypi" "meta-aesd")
+layers=("meta-raspberrypi" "meta-aesd" "meta-rtes")
 add_layers ".." "${layers[@]}"
 
 set -e
