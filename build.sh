@@ -27,12 +27,15 @@ function add_configs {
 # CONFLINE="MACHINE = \"qemuarm64\""
 configs=(\
 	"MACHINE ?= \"raspberrypi4\""\  # Target hardware
-	"IMAGE_FSTYPES = \"wic.bz2\""\  # Image type rpi-sdimg
 	"GPU_MEM = \"16\""\  # Minimum GPU memory
-	"DISTRO_FEATURES:append = \"wifi\""\  # WiFi support
-	"IMAGE_INSTALL:append = \"v4l-utils python3 ntp wpa-supplicant\""\
+	"IMAGE_FSTYPES = \"wic.bz2\""\  # Image type rpi-sdimg
+	"IMAGE_FSTYPES_DEBUGFS = \"tar.bz2\""\  # Debug FS
+	"IMAGE_GEN_DEBUGFS = \"1\""\  # Debug FS fragment
 	"LICENSE_FLAGS_ACCEPTED = \"commercial synaptics-killswitch\""\  # License
+	"IMAGE_INSTALL:append = \"v4l-utils python3 ntp wpa-supplicant\""\
+	"DISTRO_FEATURES:append = \"wifi\""\  # WiFi support
 	"IMAGE_FEATURES += \"ssh-server-openssh\""\  # SSH
+	"EXTRA_IMAGE_FEATURES:append = \" tools-debug\""\  # gdb
 	"MACHINE_ESSENTIAL_EXTRA_RRECOMMENDS += \"kernel-modules\""\  # kernel modules
 	"MACHINE_EXTRA_RDEPENDS += \"kernel-module-aesdchar\""\  # Our kernel module
 )

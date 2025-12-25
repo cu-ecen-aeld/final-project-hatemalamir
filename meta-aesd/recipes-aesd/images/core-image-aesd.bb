@@ -1,5 +1,5 @@
 inherit core-image
-CORE_IMAGE_EXTRA_INSTALL += " openssh v4l-utils aesdsocket aesdchar"
+CORE_IMAGE_EXTRA_INSTALL += " openssh v4l-utils aesdsocket aesdchar rtes"
 inherit extrausers
 # See https://docs.yoctoproject.org/singleindex.html#extrausers-bbclass
 # We set a default password of root to match our busybox instance setup
